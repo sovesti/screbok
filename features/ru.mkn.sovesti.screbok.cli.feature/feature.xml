@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="ru.mkn.sovesti.screbok.cli.feature"
+      label="Screbok CLI Feature"
+      version="1.0.0.qualifier"
+      provider-name="Vasily Fedorov">
+
+   <requires>
+      <import feature="ru.mkn.sovesti.screbok.core.feature" version="1.0.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="ru.mkn.sovesti.screbok.cli"
+         version="0.0.0"/>
+
+</feature>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Screbok Markdown Tests
+Bundle-SymbolicName: ru.mkn.sovesti.screbok.core.markdown.tests
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: ru.mkn.sovesti.screbok.core.markdown;bundle-version="[1.0.0,2.0.0)",
+ org.junit;bundle-version="[4.13.0,5.0.0)"
+Bundle-Vendor: Vasily Fedorov
+Automatic-Module-Name: ru.mkn.sovesti.screbok.core.markdown.tests
+Bundle-RequiredExecutionEnvironment: JavaSE-21

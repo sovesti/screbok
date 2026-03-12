@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ru.mkn.sovesti.screbok.dsm.model/src-gen" editDirectory="/ru.mkn.sovesti.screbok.dsm.edit/src-gen"
+    editorDirectory="/ru.mkn.sovesti.screbok.dsm.editor/src-gen" modelPluginID="ru.mkn.sovesti.screbok.dsm.model"
+    modelName="Dsm" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0" copyrightFields="false"
+    editPluginID="ru.mkn.sovesti.screbok.dsm.edit" editorPluginID="ru.mkn.sovesti.screbok.dsm.editor"
+    usedGenPackages="../../ru.mkn.sovesti.screbok.mlm.model/model/mlm.genmodel#//mlm"
+    operationReflection="true" importOrganizing="true" styleProviders="true" oSGiCompatible="true">
+  <foreignModel>dsm.ecore</foreignModel>
+  <genPackages prefix="Dsm" basePackage="ru.mkn.sovesti.screbok" resource="XMI" disposableProviderFactory="true"
+      interfacePackageSuffix="model.api" metaDataPackageSuffix="model.meta" classPackageSuffix="model.impl"
+      utilityPackageSuffix="model.util" providerPackageSuffix="edit.providers" presentationPackageSuffix="editor"
+      testsPackageSuffix="model.tests" ecorePackage="dsm.ecore#/">
+    <genClasses image="false" ecoreClass="dsm.ecore#//Named">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dsm.ecore#//Named/name"/>
+    </genClasses>
+    <genClasses ecoreClass="dsm.ecore#//Library">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dsm.ecore#//Library/rules"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="dsm.ecore#//Rules">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dsm.ecore#//Rules/rules"/>
+    </genClasses>
+    <genClasses ecoreClass="dsm.ecore#//DocumentationLanguage"/>
+    <genClasses ecoreClass="dsm.ecore#//DocumentationEngine"/>
+    <genClasses ecoreClass="dsm.ecore#//Organization"/>
+    <genClasses ecoreClass="dsm.ecore#//Book">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dsm.ecore#//Book/parameters"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dsm.ecore#//Book/language"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dsm.ecore#//Book/engine"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dsm.ecore#//Book/organization"/>
+    </genClasses>
+    <genClasses ecoreClass="dsm.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dsm.ecore#//Parameter/initial"/>
+    </genClasses>
+    <genClasses ecoreClass="dsm.ecore#//Rule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dsm.ecore#//Rule/pattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dsm.ecore#//Rule/result"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dsm.ecore#//Rule/priority"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

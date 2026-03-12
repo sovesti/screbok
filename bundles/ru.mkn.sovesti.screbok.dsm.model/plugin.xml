@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dsm -->
+      <package
+            uri="http://www.sovesti.ru/screbok/dsm"
+            class="ru.mkn.sovesti.screbok.dsm.model.meta.DsmPackage"
+            genModel="model/dsm.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated dsm -->
+      <parser
+            type="dsm"
+            class="ru.mkn.sovesti.screbok.dsm.model.util.DsmResourceFactoryImpl"/>
+   </extension>
+</plugin>

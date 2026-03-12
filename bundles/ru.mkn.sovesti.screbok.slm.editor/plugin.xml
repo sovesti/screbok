@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated slm -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ru.mkn.sovesti.screbok.slm.editor.SlmModelWizardID"
+            name="%_UI_SlmModelWizard_label"
+            class="ru.mkn.sovesti.screbok.slm.editor.SlmModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SlmModelFile.gif">
+         <description>%_UI_SlmModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated slm -->
+      <editor
+            id="ru.mkn.sovesti.screbok.slm.editor.SlmEditorID"
+            name="%_UI_SlmEditor_label"
+            icon="icons/full/obj16/SlmModelFile.gif"
+            extensions="slm"
+            class="ru.mkn.sovesti.screbok.slm.editor.SlmEditor"
+            contributorClass="ru.mkn.sovesti.screbok.slm.editor.SlmActionBarContributor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="ru.mkn.sovesti.screbok.slm.editor.LaunchHandler"
+            id="ru.mkn.sovesti.screbok.slm.command.launch"
+            name="Start scrapping">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command
+               commandId="ru.mkn.sovesti.screbok.slm.command.launch"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

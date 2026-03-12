@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ru.mkn.sovesti.screbok</groupId>
+	<artifactId>ru.mkn.sovesti.screbok.aggregator</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>../ru.mkn.sovesti.screbok.parent</module>
+		<module>../ru.mkn.sovesti.screbok.target</module>
+
+		<module>../../bundles/ru.mkn.sovesti.screbok.common</module>
+		<module>../../bundles/ru.mkn.sovesti.screbok.mlm.model</module>
+		<module>../../bundles/ru.mkn.sovesti.screbok.mlm.edit</module>
+		<module>../../bundles/ru.mkn.sovesti.screbok.dsm.model</module>
+		<module>../../bundles/ru.mkn.sovesti.screbok.dsm.edit</module>
+		<module>../../bundles/ru.mkn.sovesti.screbok.core.scrap</module>
+		<module>../../bundles/ru.mkn.sovesti.screbok.core.markdown</module>
+		<module>../../bundles/ru.mkn.sovesti.screbok.slm.model</module>
+		<module>../../bundles/ru.mkn.sovesti.screbok.slm.edit</module>
+		<module>../../bundles/ru.mkn.sovesti.screbok.mlm.editor</module>
+		<module>../../bundles/ru.mkn.sovesti.screbok.dsm.editor</module>
+		<module>../../bundles/ru.mkn.sovesti.screbok.slm.editor</module>
+		<module>../../features/ru.mkn.sovesti.screbok.core.feature</module>
+
+		<module>../../tests/ru.mkn.sovesti.screbok.core.scrap.tests</module>
+		<module>../../tests/ru.mkn.sovesti.screbok.dsm.model.tests</module>
+		<module>../../tests/ru.mkn.sovesti.screbok.core.markdown.tests</module>
+
+		<module>../../bundles/ru.mkn.sovesti.screbok.cli</module>
+		<module>../../features/ru.mkn.sovesti.screbok.cli.feature</module>
+		<module>../../products/ru.mkn.sovesti.screbok.cli.product</module>
+
+		<module>../../bundles/ru.mkn.sovesti.screbok.ui.workbench</module>
+		<module>../../features/ru.mkn.sovesti.screbok.ui.feature</module>
+		<module>../../products/ru.mkn.sovesti.screbok.product</module>
+
+	</modules>
+</project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dsm" nsURI="http://www.sovesti.ru/screbok/dsm" nsPrefix="dsm">
+  <eClassifiers xsi:type="ecore:EClass" name="Named" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Library">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rules" upperBound="-1"
+        eType="#//Rules" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rules" abstract="true" interface="true"
+      eSuperTypes="#//Named">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rules" upperBound="-1"
+        eType="#//Rule" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentationLanguage" eSuperTypes="#//Rules"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentationEngine" eSuperTypes="#//Rules"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Organization" eSuperTypes="#//Rules"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Book" eSuperTypes="#//Rules">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="language" eType="#//DocumentationLanguage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="engine" eType="#//DocumentationEngine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="organization" eType="#//Organization"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//Named">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initial" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rule" eSuperTypes="#//Named">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pattern" upperBound="-1"
+        eType="ecore:EClass ../../ru.mkn.sovesti.screbok.mlm.model/model/mlm.ecore#//MarkupNode"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="result" upperBound="-1"
+        eType="ecore:EClass ../../ru.mkn.sovesti.screbok.mlm.model/model/mlm.ecore#//MarkupNode"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+</ecore:EPackage>

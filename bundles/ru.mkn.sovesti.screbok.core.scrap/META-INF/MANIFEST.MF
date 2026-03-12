@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Screbok Scrapping
+Bundle-SymbolicName: ru.mkn.sovesti.screbok.core.scrap
+Bundle-Version: 1.0.0.qualifier
+Export-Package: ru.mkn.sovesti.screbok.core.scrap
+Bundle-Vendor: Vasily Fedorov
+Automatic-Module-Name: ru.mkn.sovesti.screbok.core.scrap
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Import-Package: org.dom4j;version="2.2.0",
+ org.dom4j.io;version="2.2.0",
+ org.w3c.tidy;version="1.0.2"
+Require-Bundle: ru.mkn.sovesti.screbok.common;bundle-version="0.0.0";visibility:=reexport,
+ ru.mkn.sovesti.screbok.mlm.model;bundle-version="[1.0.0,2.0.0)"

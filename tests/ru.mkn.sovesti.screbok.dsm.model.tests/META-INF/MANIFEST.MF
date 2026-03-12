@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DSM Tests
+Bundle-SymbolicName: ru.mkn.sovesti.screbok.dsm.model.tests
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.junit;bundle-version="4.13.2",
+ ru.mkn.sovesti.screbok.dsm.model;bundle-version="1.0.0",
+ ru.mkn.sovesti.screbok.common;bundle-version="[1.0.0,2.0.0)"
+Bundle-Vendor: Vasily Fedorov
+Automatic-Module-Name: ru.mkn.sovesti.screbok.dsm.model.tests
+Bundle-RequiredExecutionEnvironment: JavaSE-21

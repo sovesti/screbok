@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dsm:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dsm="http://www.sovesti.ru/screbok/dsm" xmlns:mlm="http://www.sovesti.ru/screbok/mlm">
+  <rules xsi:type="dsm:DocumentationLanguage" name="HTML">
+    <rules name="Title" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="title">
+        <children xsi:type="mlm:Placeholder"/>
+      </pattern>
+      <result xsi:type="mlm:Section" level="1">
+        <title xsi:type="mlm:Placeholder" name="" key=""/>
+      </result>
+    </rules>
+    <rules name="Heading 1" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="h1">
+        <children xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </children>
+      </pattern>
+      <result xsi:type="mlm:Section" level="2">
+        <title xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </title>
+      </result>
+    </rules>
+    <rules name="Heading 2" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="h2">
+        <children xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </children>
+      </pattern>
+      <result xsi:type="mlm:Section" level="3">
+        <title xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </title>
+      </result>
+    </rules>
+    <rules name="Heading 3" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="h3">
+        <children xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </children>
+      </pattern>
+      <result xsi:type="mlm:Section" level="4">
+        <title xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </title>
+      </result>
+    </rules>
+    <rules name="Bold" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="b">
+        <children xsi:type="mlm:Placeholder"/>
+      </pattern>
+      <result xsi:type="mlm:Emphasized" type="BOLD">
+        <parts xsi:type="mlm:Placeholder"/>
+      </result>
+    </rules>
+    <rules name="Emphasis" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="em">
+        <children xsi:type="mlm:Placeholder"/>
+      </pattern>
+      <result xsi:type="mlm:Emphasized">
+        <parts xsi:type="mlm:Placeholder"/>
+      </result>
+    </rules>
+    <rules name="Definition list" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="dl">
+        <children xsi:type="mlm:Wildcard" key="">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </children>
+      </pattern>
+      <result xsi:type="mlm:LineBreak"/>
+      <result xsi:type="mlm:MarkupList">
+        <items xsi:type="mlm:Wildcard" key="">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </items>
+      </result>
+    </rules>
+    <rules name="Definition">
+      <pattern xsi:type="mlm:WrappingNode" name="dt">
+        <children xsi:type="mlm:Placeholder" name="" key="term"/>
+      </pattern>
+      <pattern xsi:type="mlm:Wildcard" key="">
+        <repeated xsi:type="mlm:WrappingNode" name="dd">
+          <children xsi:type="mlm:Placeholder" key="definition"/>
+        </repeated>
+      </pattern>
+      <result xsi:type="mlm:WrappingNode">
+        <children xsi:type="mlm:Placeholder" key="term"/>
+        <children xsi:type="mlm:Wildcard" key="">
+          <repeated xsi:type="mlm:Placeholder" key="definition"/>
+        </children>
+      </result>
+    </rules>
+    <rules name="Paragraph" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="p">
+        <children xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </children>
+      </pattern>
+      <result xsi:type="mlm:WrappingNode">
+        <children xsi:type="mlm:LineBreak"/>
+        <children xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </children>
+        <children xsi:type="mlm:LineBreak"/>
+      </result>
+    </rules>
+    <rules name="Preformatted" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="pre">
+        <children xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </children>
+      </pattern>
+      <result xsi:type="mlm:CodeListing">
+        <content xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </content>
+      </result>
+    </rules>
+    <rules name="Strong" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="strong">
+        <children xsi:type="mlm:Placeholder"/>
+      </pattern>
+      <result xsi:type="mlm:Emphasized" type="BOLD">
+        <parts xsi:type="mlm:Placeholder"/>
+      </result>
+    </rules>
+    <rules name="Image" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="img">
+        <attributes name="src"/>
+      </pattern>
+      <result xsi:type="mlm:Image" link="${src}"/>
+    </rules>
+    <rules name="Anchor reference" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="a">
+        <attributes name="href"/>
+        <children xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </children>
+      </pattern>
+      <result xsi:type="mlm:Reference" link="${href}">
+        <title xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </title>
+      </result>
+    </rules>
+    <rules name="Anchor" priority="1">
+      <pattern xsi:type="mlm:WrappingNode" name="a">
+        <attributes name="name"/>
+      </pattern>
+      <result xsi:type="mlm:Anchor" name="${name}"/>
+    </rules>
+  </rules>
+  <rules xsi:type="dsm:DocumentationEngine" name="DocBook">
+    <rules name="Table of contents" priority="3">
+      <pattern xsi:type="mlm:WrappingNode" language="html" name="div">
+        <attributes name="class" value="toc"/>
+        <children xsi:type="mlm:WrappingNode" name="p">
+          <children xsi:type="mlm:Placeholder" key="title"/>
+        </children>
+        <children xsi:type="mlm:WrappingNode" name="dl">
+          <attributes name="class" value="toc"/>
+          <children xsi:type="mlm:Wildcard">
+            <repeated xsi:type="mlm:Placeholder" key="body"/>
+          </children>
+        </children>
+      </pattern>
+      <result xsi:type="mlm:Section" level="5">
+        <title xsi:type="mlm:Placeholder" name="" key="title"/>
+        <children xsi:type="mlm:Wildcard" key="">
+          <repeated xsi:type="mlm:LineBreak"/>
+          <repeated xsi:type="mlm:Placeholder" key="body"/>
+          <repeated xsi:type="mlm:LineBreak"/>
+        </children>
+      </result>
+    </rules>
+    <rules name="List of tables" priority="3">
+      <pattern xsi:type="mlm:WrappingNode" language="html" name="div">
+        <attributes name="class" value="list-of-tables"/>
+        <children xsi:type="mlm:WrappingNode" name="p">
+          <children xsi:type="mlm:Placeholder" key="title"/>
+        </children>
+        <children xsi:type="mlm:WrappingNode" name="dl">
+          <children xsi:type="mlm:Wildcard">
+            <repeated xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:Placeholder" key="name"/>
+              <children xsi:type="mlm:Placeholder" key="link"/>
+            </repeated>
+          </children>
+        </children>
+      </pattern>
+      <result xsi:type="mlm:Section" level="5">
+        <title xsi:type="mlm:Placeholder" name="" key="title"/>
+        <children xsi:type="mlm:Wildcard" key="">
+          <repeated xsi:type="mlm:LineBreak"/>
+          <repeated xsi:type="mlm:WrappingNode">
+            <children xsi:type="mlm:Placeholder" name="" key="name"/>
+            <children xsi:type="mlm:Placeholder" key="link"/>
+          </repeated>
+          <repeated xsi:type="mlm:LineBreak"/>
+        </children>
+      </result>
+    </rules>
+  </rules>
+  <rules xsi:type="dsm:Book" name="OpenNLP" language="//@rules.0" engine="//@rules.1"/>
+</dsm:Library>
