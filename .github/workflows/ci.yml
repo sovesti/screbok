@@ -30,28 +30,6 @@ jobs:
           name: ru.mkn.sovesti.screbok.cli
           path: ru.mkn.sovesti.screbok/products/ru.mkn.sovesti.screbok.cli.product/target/ru.mkn.sovesti.screbok*.zip
 
-  doc:
-    runs-on: [ubuntu-24.04]
-    needs: [build]
-    steps:
-      - uses: actions/checkout@v6
-      - name: Set up JDK 21
-        uses: actions/setup-java@v5
-        with:
-          java-version: '21'
-          distribution: 'temurin'
-      - name: Set up Maven
-        uses: stCarolas/setup-maven@v5
-        with:
-          maven-version: 3.9.13
-      - name: Create JavaDoc with Maven
-        run: mvn --batch-mode --update-snapshots site
-      - name: Upload doc artifact
-        uses: actions/upload-artifact@v7
-        with:
-          name: javadoc
-          path: org.example.impl/target/site
-
   test:
     runs-on: [ubuntu-24.04]
     needs: [build]
