@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mlm:SitePage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mlm="http://www.sovesti.ru/screbok/mlm" uri="https://opennlp.apache.org/docs/2.5.7/manual/opennlp.html" name="opennlp">
+  <site href="opennlp.mlm#/"/>
+</mlm:SitePage>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slm:Launch xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:slm="http://www.sovesti.ru/screbok/slm">
+  <actions xsi:type="slm:Scrap" name="Download OpenNLP docs" output="scrap">
+    <pages href="manual.mlm#/"/>
+  </actions>
+  <actions xsi:type="slm:Convert" name="Convert OpenNLP docs to Markdown" output="md">
+    <book href="opennlp.dsm#//@rules.2"/>
+    <pages href="manual.mlm#/"/>
+  </actions>
+</slm:Launch>

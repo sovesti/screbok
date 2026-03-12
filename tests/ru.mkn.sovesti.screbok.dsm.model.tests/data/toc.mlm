@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mlm:SitePage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mlm="http://www.sovesti.ru/screbok/mlm" uri="https://opennlp.apache.org/docs/2.5.7/manual/opennlp.html" name="opennlp">
+  <root xsi:type="mlm:WrappingNode" name="html">
+    <children xsi:type="mlm:WrappingNode" language="" name="div">
+      <attributes name="class" value="toc"/>
+      <children xsi:type="mlm:WrappingNode" name="p">
+        <children xsi:type="mlm:WrappingNode" name="b">
+          <children xsi:type="mlm:RawText" text="Table of Contents"/>
+        </children>
+      </children>
+      <children xsi:type="mlm:WrappingNode" name="dl">
+        <attributes name="class" value="toc"/>
+        <children xsi:type="mlm:WrappingNode" name="dt">
+          <children xsi:type="mlm:WrappingNode" name="span">
+            <attributes name="class" value="chapter"/>
+            <children xsi:type="mlm:WrappingNode" name="a">
+              <attributes name="href" value="#opennlp"/>
+              <children xsi:type="mlm:RawText" text="1. Introduction"/>
+            </children>
+          </children>
+        </children>
+        <children xsi:type="mlm:WrappingNode" name="dd">
+          <children xsi:type="mlm:WrappingNode" name="dl">
+            <children xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:WrappingNode" name="span">
+                <attributes name="class" value="section"/>
+                <children xsi:type="mlm:WrappingNode" name="a">
+                  <attributes name="href" value="#intro.description"/>
+                  <children xsi:type="mlm:RawText" text="Description"/>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:WrappingNode" name="span">
+                <attributes name="class" value="section"/>
+                <children xsi:type="mlm:WrappingNode" name="a">
+                  <attributes name="href" value="#intro.general.library.structure"/>
+                  <children xsi:type="mlm:RawText" text="General Library Structure"/>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:WrappingNode" name="span">
+                <attributes name="class" value="section"/>
+                <children xsi:type="mlm:WrappingNode" name="a">
+                  <attributes name="href" value="#intro.api"/>
+                  <children xsi:type="mlm:RawText" text="Application Program Interface (API). Generic Example"/>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:WrappingNode" name="span">
+                <attributes name="class" value="section"/>
+                <children xsi:type="mlm:WrappingNode" name="a">
+                  <attributes name="href" value="#intro.cli"/>
+                  <children xsi:type="mlm:RawText" text="Command line interface (CLI)"/>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dd">
+              <children xsi:type="mlm:WrappingNode" name="dl">
+                <children xsi:type="mlm:WrappingNode" name="dt">
+                  <children xsi:type="mlm:WrappingNode" name="span">
+                    <attributes name="class" value="section"/>
+                    <children xsi:type="mlm:WrappingNode" name="a">
+                      <attributes name="href" value="#intro.cli.description"/>
+                      <children xsi:type="mlm:RawText" text="Description"/>
+                    </children>
+                  </children>
+                </children>
+                <children xsi:type="mlm:WrappingNode" name="dt">
+                  <children xsi:type="mlm:WrappingNode" name="span">
+                    <attributes name="class" value="section"/>
+                    <children xsi:type="mlm:WrappingNode" name="a">
+                      <attributes name="href" value="#intro.cli.toolslist"/>
+                      <children xsi:type="mlm:RawText" text="List of tools"/>
+                    </children>
+                  </children>
+                </children>
+                <children xsi:type="mlm:WrappingNode" name="dt">
+                  <children xsi:type="mlm:WrappingNode" name="span">
+                    <attributes name="class" value="section"/>
+                    <children xsi:type="mlm:WrappingNode" name="a">
+                      <attributes name="href" value="#intro.cli.setup"/>
+                      <children xsi:type="mlm:RawText" text="Setting up"/>
+                    </children>
+                  </children>
+                </children>
+                <children xsi:type="mlm:WrappingNode" name="dt">
+                  <children xsi:type="mlm:WrappingNode" name="span">
+                    <attributes name="class" value="section"/>
+                    <children xsi:type="mlm:WrappingNode" name="a">
+                      <attributes name="href" value="#intro.cli.generic"/>
+                      <children xsi:type="mlm:RawText" text="Generic Example"/>
+                    </children>
+                  </children>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:WrappingNode" name="span">
+                <attributes name="class" value="section"/>
+                <children xsi:type="mlm:WrappingNode" name="a">
+                  <attributes name="href" value="#intro.models"/>
+                  <children xsi:type="mlm:RawText" text="OpenNLP Models"/>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dd">
+              <children xsi:type="mlm:WrappingNode" name="dl">
+                <children xsi:type="mlm:WrappingNode" name="dt">
+                  <children xsi:type="mlm:WrappingNode" name="span">
+                    <attributes name="class" value="section"/>
+                    <children xsi:type="mlm:WrappingNode" name="a">
+                      <attributes name="href" value="#intro.models.native"/>
+                      <children xsi:type="mlm:RawText" text="OpenNLP Models"/>
+                    </children>
+                  </children>
+                </children>
+                <children xsi:type="mlm:WrappingNode" name="dt">
+                  <children xsi:type="mlm:WrappingNode" name="span">
+                    <attributes name="class" value="section"/>
+                    <children xsi:type="mlm:WrappingNode" name="a">
+                      <attributes name="href" value="#intro.models.onnx"/>
+                      <children xsi:type="mlm:RawText" text="ONNX Models"/>
+                    </children>
+                  </children>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:WrappingNode" name="span">
+                <attributes name="class" value="section"/>
+                <children xsi:type="mlm:WrappingNode" name="a">
+                  <attributes name="href" value="#intro.sysprops"/>
+                  <children xsi:type="mlm:RawText" text="System Properties"/>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dd">
+              <children xsi:type="mlm:WrappingNode" name="dl">
+                <children xsi:type="mlm:WrappingNode" name="dt">
+                  <children xsi:type="mlm:WrappingNode" name="span">
+                    <attributes name="class" value="section"/>
+                    <children xsi:type="mlm:WrappingNode" name="a">
+                      <attributes name="href" value="#intro.sysprops.interner"/>
+                      <children xsi:type="mlm:RawText" text="String Interning"/>
+                    </children>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </children>
+        </children>
+        <children xsi:type="mlm:WrappingNode" name="dt">
+          <children xsi:type="mlm:WrappingNode" name="span">
+            <attributes name="class" value="chapter"/>
+            <children xsi:type="mlm:WrappingNode" name="a">
+              <attributes name="href" value="#tools.langdetect"/>
+              <children xsi:type="mlm:RawText" text="2. Language Detector"/>
+            </children>
+          </children>
+        </children>
+        <children xsi:type="mlm:WrappingNode" name="dd">
+          <children xsi:type="mlm:WrappingNode" name="dl">
+            <children xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:WrappingNode" name="span">
+                <attributes name="class" value="section"/>
+                <children xsi:type="mlm:WrappingNode" name="a">
+                  <attributes name="href" value="#tools.langdetect.classifying"/>
+                  <children xsi:type="mlm:RawText" text="Classifying"/>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:WrappingNode" name="span">
+                <attributes name="class" value="section"/>
+                <children xsi:type="mlm:WrappingNode" name="a">
+                  <attributes name="href" value="#tools.langdetect.classifying.cmdline"/>
+                  <children xsi:type="mlm:RawText" text="Language Detector Tool"/>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:WrappingNode" name="span">
+                <attributes name="class" value="section"/>
+                <children xsi:type="mlm:WrappingNode" name="a">
+                  <attributes name="href" value="#tools.langdetect.classifying.api"/>
+                  <children xsi:type="mlm:RawText" text="Language Detector API"/>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:WrappingNode" name="span">
+                <attributes name="class" value="section"/>
+                <children xsi:type="mlm:WrappingNode" name="a">
+                  <attributes name="href" value="#tools.langdetect.training"/>
+                  <children xsi:type="mlm:RawText" text="Training"/>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="mlm:WrappingNode" name="dd">
+              <children xsi:type="mlm:WrappingNode" name="dl">
+                <children xsi:type="mlm:WrappingNode" name="dt">
+                  <children xsi:type="mlm:WrappingNode" name="span">
+                    <attributes name="class" value="section"/>
+                    <children xsi:type="mlm:WrappingNode" name="a">
+                      <attributes name="href" value="#tools.langdetect.training.tool"/>
+                      <children xsi:type="mlm:RawText" text="Training Tool"/>
+                    </children>
+                  </children>
+                </children>
+                <children xsi:type="mlm:WrappingNode" name="dt">
+                  <children xsi:type="mlm:WrappingNode" name="span">
+                    <attributes name="class" value="section"/>
+                    <children xsi:type="mlm:WrappingNode" name="a">
+                      <attributes name="href" value="#tools.langdetect.training.leipzig"/>
+                      <children xsi:type="mlm:RawText" text="Training with Leipzig"/>
+                    </children>
+                  </children>
+                </children>
+                <children xsi:type="mlm:WrappingNode" name="dt">
+                  <children xsi:type="mlm:WrappingNode" name="span">
+                    <attributes name="class" value="section"/>
+                    <children xsi:type="mlm:WrappingNode" name="a">
+                      <attributes name="href" value="#tools.langdetect.training.api"/>
+                      <children xsi:type="mlm:RawText" text="Training API"/>
+                    </children>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </children>
+        </children>
+      </children>
+    </children>
+  </root>
+</mlm:SitePage>

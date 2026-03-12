@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ru.mkn.sovesti.screbok.slm.model/src-gen" editDirectory="/ru.mkn.sovesti.screbok.slm.edit/src-gen"
+    editorDirectory="/ru.mkn.sovesti.screbok.slm.editor/src-gen" modelPluginID="ru.mkn.sovesti.screbok.slm.model"
+    modelName="Slm" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0" copyrightFields="false"
+    editPluginID="ru.mkn.sovesti.screbok.slm.edit" editorPluginID="ru.mkn.sovesti.screbok.slm.editor"
+    usedGenPackages="../../ru.mkn.sovesti.screbok.dsm.model/model/dsm.genmodel#//dsm ../../ru.mkn.sovesti.screbok.mlm.model/model/mlm.genmodel#//mlm"
+    operationReflection="true" importOrganizing="true" styleProviders="true" oSGiCompatible="true">
+  <foreignModel>slm.ecore</foreignModel>
+  <genPackages prefix="Slm" basePackage="ru.mkn.sovesti.screbok" resource="XMI" disposableProviderFactory="true"
+      interfacePackageSuffix="model.api" metaDataPackageSuffix="model.meta" classPackageSuffix="model.impl"
+      utilityPackageSuffix="model.util" providerPackageSuffix="edit.providers" presentationPackageSuffix="editor"
+      testsPackageSuffix="model.tests" ecorePackage="slm.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="slm.ecore#//Format">
+      <genEnumLiterals ecoreEnumLiteral="slm.ecore#//Format/MARKDOWN"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="slm.ecore#//LaunchContext"/>
+    <genDataTypes ecoreDataType="slm.ecore#//CoreException"/>
+    <genClasses ecoreClass="slm.ecore#//Launch">
+      <genFeatures notify="false" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference slm.ecore#//Launch/actions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="slm.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute slm.ecore#//Action/output"/>
+      <genOperations ecoreOperation="slm.ecore#//Action/run">
+        <genParameters ecoreParameter="slm.ecore#//Action/run/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="slm.ecore#//Scrap">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference slm.ecore#//Scrap/pages"/>
+    </genClasses>
+    <genClasses ecoreClass="slm.ecore#//Convert">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference slm.ecore#//Convert/book"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference slm.ecore#//Convert/pages"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute slm.ecore#//Convert/format"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

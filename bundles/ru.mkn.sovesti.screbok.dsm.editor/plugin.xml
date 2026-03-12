@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dsm -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ru.mkn.sovesti.screbok.dsm.editor.DsmModelWizardID"
+            name="%_UI_DsmModelWizard_label"
+            class="ru.mkn.sovesti.screbok.dsm.editor.DsmModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DsmModelFile.gif">
+         <description>%_UI_DsmModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dsm -->
+      <editor
+            id="ru.mkn.sovesti.screbok.dsm.editor.DsmEditorID"
+            name="%_UI_DsmEditor_label"
+            icon="icons/full/obj16/DsmModelFile.gif"
+            extensions="dsm"
+            class="ru.mkn.sovesti.screbok.dsm.editor.DsmEditor"
+            contributorClass="ru.mkn.sovesti.screbok.dsm.editor.DsmActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

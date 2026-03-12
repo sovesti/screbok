@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mlm" nsURI="http://www.sovesti.ru/screbok/mlm" nsPrefix="mlm">
+  <eClassifiers xsi:type="ecore:EClass" name="Located" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Site" eSuperTypes="#//Located">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resources" upperBound="-1"
+        eType="#//SiteResource" eOpposite="#//SiteResource/site"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SiteResource" abstract="true" eSuperTypes="#//Located">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="site" eType="#//Site" eOpposite="#//Site/resources"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SitePage" eSuperTypes="#//SiteResource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="root" eType="#//MarkupNode"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SiteMedia" eSuperTypes="#//SiteResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkupNode" abstract="true" eSuperTypes="#//Located">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" ordered="false"
+        upperBound="-1" eType="#//NodeAttribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Wildcard" eSuperTypes="#//MarkupNode">
+    <eOperations name="get" eType="#//MarkupNode">
+      <eParameters name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repeated" upperBound="-1"
+        eType="#//MarkupNode" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Placeholder" eSuperTypes="#//MarkupNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WrappingNode" eSuperTypes="#//MarkupNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//MarkupNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImaginaryNode" eSuperTypes="#//MarkupNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="origin" eType="#//MarkupNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#//MarkupNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="title" eType="#//MarkupNode"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//MarkupNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anchor" eType="#//Anchor"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Anchor" eSuperTypes="#//MarkupNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkupList" eSuperTypes="#//MarkupNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ListType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//MarkupNode" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RawText" eSuperTypes="#//MarkupNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeListing" eSuperTypes="#//MarkupNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" eType="#//MarkupNode"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reference" eSuperTypes="#//MarkupNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="title" eType="#//MarkupNode"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenced" eType="#//Located"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//MarkupNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Emphasized" eSuperTypes="#//MarkupNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EmphasisType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parts" upperBound="-1"
+        eType="#//MarkupNode" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LineBreak" eSuperTypes="#//MarkupNode"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ListType">
+    <eLiterals name="BULLETED"/>
+    <eLiterals name="NUMBERED" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EmphasisType">
+    <eLiterals name="ITALIC"/>
+    <eLiterals name="BOLD" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>

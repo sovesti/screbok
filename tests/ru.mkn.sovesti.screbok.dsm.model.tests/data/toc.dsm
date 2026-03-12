@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dsm:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dsm="http://www.sovesti.ru/screbok/dsm" xmlns:mlm="http://www.sovesti.ru/screbok/mlm">
+  <rules xsi:type="dsm:DocumentationLanguage" name="html">
+    <rules>
+      <pattern xsi:type="mlm:WrappingNode" name="h1">
+        <children xsi:type="mlm:Placeholder"/>
+      </pattern>
+      <result xsi:type="mlm:Section" level="2">
+        <title xsi:type="mlm:Placeholder"/>
+      </result>
+    </rules>
+    <rules>
+      <pattern xsi:type="mlm:WrappingNode" name="h2">
+        <children xsi:type="mlm:Placeholder"/>
+      </pattern>
+      <result xsi:type="mlm:Section" level="3">
+        <title xsi:type="mlm:Placeholder"/>
+      </result>
+    </rules>
+    <rules>
+      <pattern xsi:type="mlm:WrappingNode" name="h3">
+        <children xsi:type="mlm:Placeholder"/>
+      </pattern>
+      <result xsi:type="mlm:Section" level="4">
+        <title xsi:type="mlm:Placeholder"/>
+      </result>
+    </rules>
+    <rules>
+      <pattern xsi:type="mlm:WrappingNode" name="b">
+        <children xsi:type="mlm:Placeholder"/>
+      </pattern>
+      <result xsi:type="mlm:Emphasized" type="BOLD">
+        <parts xsi:type="mlm:Placeholder"/>
+      </result>
+    </rules>
+    <rules>
+      <pattern xsi:type="mlm:WrappingNode" name="em">
+        <children xsi:type="mlm:Placeholder"/>
+      </pattern>
+      <result xsi:type="mlm:Emphasized">
+        <parts xsi:type="mlm:Placeholder"/>
+      </result>
+    </rules>
+    <rules priority="2">
+      <pattern xsi:type="mlm:WrappingNode" name="div">
+        <attributes name="class" value="toc"/>
+        <children xsi:type="mlm:WrappingNode" name="p">
+          <children xsi:type="mlm:Placeholder" name="" key="title"/>
+        </children>
+        <children xsi:type="mlm:WrappingNode" name="dl">
+          <attributes name="class" value="toc"/>
+          <children xsi:type="mlm:Wildcard" name="wc" key="body">
+            <repeated xsi:type="mlm:WrappingNode" name="dt">
+              <children xsi:type="mlm:Placeholder" key="term"/>
+            </repeated>
+            <repeated xsi:type="mlm:WrappingNode" name="dd">
+              <children xsi:type="mlm:Placeholder" key="definition"/>
+            </repeated>
+          </children>
+        </children>
+      </pattern>
+      <result xsi:type="mlm:Section" level="5">
+        <title xsi:type="mlm:Placeholder" name="" key="title"/>
+        <children xsi:type="mlm:Wildcard" key="body">
+          <repeated xsi:type="mlm:Placeholder" key="term"/>
+          <repeated xsi:type="mlm:Placeholder" key="definition"/>
+        </children>
+      </result>
+    </rules>
+    <rules>
+      <pattern xsi:type="mlm:WrappingNode" name="dl">
+        <children xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </children>
+      </pattern>
+      <result xsi:type="mlm:MarkupList">
+        <items xsi:type="mlm:Wildcard">
+          <repeated xsi:type="mlm:Placeholder"/>
+        </items>
+      </result>
+    </rules>
+  </rules>
+  <rules xsi:type="dsm:Book" name="OpenNLP" language="//@rules.0"/>
+</dsm:Library>

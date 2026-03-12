@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ru.mkn.sovesti.screbok.mlm.model/src-gen" editDirectory="/ru.mkn.sovesti.screbok.mlm.edit/src-gen"
+    editorDirectory="/ru.mkn.sovesti.screbok.mlm.editor/src-gen" modelPluginID="ru.mkn.sovesti.screbok.mlm.model"
+    modelName="Mlm" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0" copyrightFields="false"
+    editPluginID="ru.mkn.sovesti.screbok.mlm.edit" editorPluginID="ru.mkn.sovesti.screbok.mlm.editor"
+    operationReflection="true" importOrganizing="true" styleProviders="true" oSGiCompatible="true">
+  <foreignModel>mlm.ecore</foreignModel>
+  <genPackages prefix="Mlm" basePackage="ru.mkn.sovesti.screbok" resource="XMI" disposableProviderFactory="true"
+      interfacePackageSuffix="model.api" metaDataPackageSuffix="model.meta" classPackageSuffix="model.impl"
+      utilityPackageSuffix="model.util" providerPackageSuffix="edit.providers" presentationPackageSuffix="editor"
+      testsPackageSuffix="model.tests" ecorePackage="mlm.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mlm.ecore#//ListType">
+      <genEnumLiterals ecoreEnumLiteral="mlm.ecore#//ListType/BULLETED"/>
+      <genEnumLiterals ecoreEnumLiteral="mlm.ecore#//ListType/NUMBERED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mlm.ecore#//EmphasisType">
+      <genEnumLiterals ecoreEnumLiteral="mlm.ecore#//EmphasisType/ITALIC"/>
+      <genEnumLiterals ecoreEnumLiteral="mlm.ecore#//EmphasisType/BOLD"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="mlm.ecore#//Located">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//Located/uri"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//Site">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mlm.ecore#//Site/resources"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mlm.ecore#//SiteResource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mlm.ecore#//SiteResource/site"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//SitePage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//SitePage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlm.ecore#//SitePage/root"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//SiteMedia"/>
+    <genClasses image="false" ecoreClass="mlm.ecore#//MarkupNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//MarkupNode/language"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//MarkupNode/name"/>
+      <genFeatures notify="false" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference mlm.ecore#//MarkupNode/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//NodeAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//NodeAttribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//NodeAttribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//Wildcard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//Wildcard/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlm.ecore#//Wildcard/repeated"/>
+      <genOperations ecoreOperation="mlm.ecore#//Wildcard/get">
+        <genParameters ecoreParameter="mlm.ecore#//Wildcard/get/index"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//Placeholder">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//Placeholder/key"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//WrappingNode">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlm.ecore#//WrappingNode/children"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//WrappingNode/transient"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//ImaginaryNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//ImaginaryNode/key"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mlm.ecore#//ImaginaryNode/origin"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//Section">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//Section/level"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference mlm.ecore#//Section/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlm.ecore#//Section/children"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlm.ecore#//Section/anchor"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//Anchor"/>
+    <genClasses ecoreClass="mlm.ecore#//MarkupList">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//MarkupList/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlm.ecore#//MarkupList/items"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//RawText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//RawText/text"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//CodeListing">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference mlm.ecore#//CodeListing/content"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//Reference">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference mlm.ecore#//Reference/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//Reference/link"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mlm.ecore#//Reference/referenced"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//Image/link"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//Emphasized">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlm.ecore#//Emphasized/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlm.ecore#//Emphasized/parts"/>
+    </genClasses>
+    <genClasses ecoreClass="mlm.ecore#//LineBreak"/>
+  </genPackages>
+</genmodel:GenModel>

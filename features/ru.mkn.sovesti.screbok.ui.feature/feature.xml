@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="ru.mkn.sovesti.screbok.ui.feature"
+      label="Screbok UI Feature"
+      version="1.0.0.qualifier"
+      provider-name="Vasily Fedorov">
+
+   <requires>
+      <import feature="ru.mkn.sovesti.screbok.core.feature" version="1.0.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="ru.mkn.sovesti.screbok.dsm.editor"
+         version="0.0.0"/>
+
+   <plugin
+         id="ru.mkn.sovesti.screbok.mlm.editor"
+         version="0.0.0"/>
+
+   <plugin
+         id="ru.mkn.sovesti.screbok.slm.editor"
+         version="0.0.0"/>
+
+   <plugin
+         id="ru.mkn.sovesti.screbok.ui.workbench"
+         version="0.0.0"/>
+
+</feature>
