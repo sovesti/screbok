@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: ru.mkn.sovesti.screbok.cli
-          path: ru.mkn.sovesti.screbok/products/ru.mkn.sovesti.screbok.cli.product/target/ru.mkn.sovesti.screbok*.zip
+          path:  /home/runner/work/screbok/screbok/products/ru.mkn.sovesti.screbok.product/target/ru.mkn.sovesti.screbok.product-*.zip
 
   test:
     runs-on: [ubuntu-24.04]
